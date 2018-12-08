@@ -1,0 +1,18 @@
+<nav>
+    <div class="nav-wrapper cyan darken-2">
+        <div class="container">
+            <a href="#" class="brand-logo center">Rodina</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li class="active"><a href="sass.html">Расписание</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {% if user.is_superuser %}
+                    <li><a href="/admin/">Админка</a></li>
+                {% else %}
+                    <li><a href="/admin/">Вход</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

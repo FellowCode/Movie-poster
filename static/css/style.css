@@ -1,0 +1,44 @@
+.film-list {
+    margin-top: 50px;
+}
+.film {
+    height: 400px;
+    border: 1px solid gainsboro;
+    margin-top: 5px;
+}
+.film img {
+    height: 100%;
+    width: auto;
+    float: left;
+}
+.film .description {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    width: calc(100% - 320px);
+}
+.description .title {
+    margin-top: 10px;
+    font-weight: 500;
+}
+.description .room .name {
+    margin: 0;
+}
+.description table {
+    margin-bottom: 10px;
+    width: auto;
+}
+.description table td {
+    padding: 2px 15px;
+    width: 70px;
+}
+.description table .time {
+    font-size: 28px;
+    font-weight: 400;
+    color: #0097a7;
+}
+.description table .price {
+    font-size: 18px;
+    font-weight: 400;
+    color: dimgrey;
+}

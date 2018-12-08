@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Rodina{% endblock %}
+
+{% block stylesheet %}{% endblock %}
+
+{% block content %}
+
+    <div class="container film-list">
+        {% for film_info in films_info %}
+        <div class="row film">
+            <img src="{{ film_info.poster }}">
+            <div class="description">
+                <h3 class="title">{{ film_info.title }}</h3>
+                <h6 class="genre">{{ film_info.genres }}</h6>
+                {% for room in film_info.rooms %}
+                <div class="room">
+                    <h5 class="name">{{ room.name }}</h5>
+                    <table class="centered">
+                        <tbody>
+                            <tr class="time">
+                                {% for time in room.times %}
+                                    <td>{{ time }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr class="price">
+                                {% for price in room.prices %}
+                                    <td>{{ price }}р.</td>
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
+
+{% block script %}
+{% endblock %}
