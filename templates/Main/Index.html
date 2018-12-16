@@ -10,9 +10,11 @@
     <div class="container film-list">
         {% for film_info in films_info %}
         <div class="row film">
-            <img src="{{ film_info.poster }}">
-            <div class="description">
-                <h3 class="title">{{ film_info.title }}</h3>
+            <div class="col s12"><h3 class="title">{{ film_info.title }}</h3></div>
+            <div class="col s3 l2 poster">
+                <img class="responsive-img" src="{{ film_info.poster }}">
+            </div>
+            <div class="col s9 l10">
                 <h6 class="genre">{{ film_info.genres }}</h6>
                 {% for room in film_info.rooms %}
                 <div class="room">
@@ -39,6 +41,35 @@
     </div>
 
 {% endblock content %}
+
+
+
+        <div class="row film">
+            <div class="col s12"><h3 class="title">Название фильма</h3></div>
+            <div class="col s3 l2 poster">
+                <img class="responsive-img" src="ссылка на постер">
+            </div>
+            <div class="col s9 l10">
+                <h6 class="genre">список жанров</h6>
+                {{ Блок кинозала, может быть повоторен несколько раз }}
+                <div class="room">
+                    <h5 class="name">Название зала</h5>
+                    <table class="centered">
+                        <tbody>
+                            <tr class="time"></tr>
+                                <td>Время сеанса1</td>
+                                <td>Время сеанса2</td>
+                            </tr>
+                            <tr class="price">
+                                <td>Стоимость билета1</td>
+                                <td>Стоимость билета2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {{ конец блока }}
+            </div>
+        </div>
 
 {% block script %}
 {% endblock %}
